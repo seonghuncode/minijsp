@@ -19,7 +19,7 @@ public class HomeServlet extends HttpServlet {
 		String number = request.getParameter("number"); 
 		//request 객체의 getParameter() 메서드로 사용자가 입력한 데이터를 가져올수있다(int로 사용하고 싶으면 형변환 필요.)
 		
-		int result = Integer.parseInt(number) * 5;
+		int result = Integer.parseInt(number);
 
 		request.setAttribute("result", result);//(jsp에서 사용할 변수이름, 그대로 넣어준다)
 		//result에서 객체를 request에 담아 보낼 경우("객체명", 객체)
@@ -32,6 +32,18 @@ public class HomeServlet extends HttpServlet {
 		
 		requestDispatcher.forward(request, response);
 		//forward메서는 == WEB-INF/intex.jspdurlfh 여기로
+		
+//		구구단 힌트
+//		servlet
+//			-number
+//			-number -> jsp
+//			-index.jsp
+//			
+//		jsp
+//			-h1 몇단위인지
+//			-<% for() {%> 
+//			<p> 3*1 =3  //<p>->텍스트 나올때 사용
+//			<%}%>
 		
 	}
 
