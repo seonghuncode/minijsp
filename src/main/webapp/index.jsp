@@ -7,10 +7,10 @@
 <title>servlet</title>
 </head>
 <body>
-	<h1>Servlet부터 실행된 jsp</h1>>
+	<h1>Servlet부터 실행된 jsp</h1>
 	
 	<p>
-		보내주신 값에 5를 곱하면 <%= request.getAttribute("result") %>
+		보내주신 값에 5를 곱하면 ${result} 
 	</p>
 	
 </body>
