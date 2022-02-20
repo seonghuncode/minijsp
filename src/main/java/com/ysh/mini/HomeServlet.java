@@ -11,20 +11,33 @@ import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet("/home")
 public class HomeServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-    
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		//클라이언트에 대한 요청 <- request ->  클라이언트에 대한 응답
 		String number = request.getParameter("number");
 		
-		System.out.println("Clients number is" + number);
+		int result = Integer.parseInt(number) * 5;
 		
-		int times = Integer.parseInt(number) * 5;
+		response.setCharacterEncoding("UTF-8");//컴퓨터는 한글을 잘 못읽기 때문에 잘 이해할 수 있도록 적어준는 것
+		response.setContentType("text/html; charset=UTF-8");//한글로 잘 넣어 달라고 써준는 것
 		
 		PrintWriter write = response.getWriter(); //웹에서 결과를 보여주기 위한 코드
+		//response의 바디에 넣는 것을 보여준느 것
 		
-		write.println("the result of 5 times of number is" + times);
+		write.println("<!DOCTYPE html>"
+				+ "<html lang='ko'>"
+				+ "<head>"
+				+ "<meta charset='UTF-8'>"
+				+ "<title>setvlet</title>"
+				+ "<body>"
+				+ "<hi>"
+				+ "보내주신 숫자에 5를 곱한 결과는"
+				+ result
+				+ "입니다."
+				+ "</h1>"
+				+ "</body>"
+				+ "</html>");
+		
 	}
 
 	
