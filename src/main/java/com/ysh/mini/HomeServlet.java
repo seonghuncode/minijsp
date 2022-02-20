@@ -22,7 +22,7 @@ public class HomeServlet extends HttpServlet {
 		
 		int times = Integer.parseInt(number) * 5;
 		
-		PrintWriter write = response.getWriter();
+		PrintWriter write = response.getWriter(); //웹에서 결과를 보여주기 위한 코드
 		
 		write.println("the result of 5 times of number is" + times);
 	}
