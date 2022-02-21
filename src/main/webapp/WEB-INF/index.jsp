@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -9,7 +8,7 @@
 </head>
 <body>
 	<h1>${result} 단</h1>
-	
+
 	<%
 	int number = (int)request.getAttribute("result");
 	
@@ -18,5 +17,5 @@
 		<p><%=number%> * <%=i%> = <%=number * i%></p>
 
 	<% } %>
-	
 </body>
+</html>

@@ -21,7 +21,7 @@ public class HomeServlet extends HttpServlet {
 		
 		int result = Integer.parseInt(number);
 
-		request.setAttribute("result", result);//(jsp에서 사용할 변수이름, 그대로 넣어준다)
+		request.setAttribute("result",result);//(jsp에서 사용할 변수이름, 그대로 넣어준다)
 		//result에서 객체를 request에 담아 보낼 경우("객체명", 객체)
 		//setAttribute는 메소드는 속성값을 변경시키는 메소드이다.
 		//getAttribute는 특정 요소노드 내에 특정  한 속성값을 가져오는 메소드이다.
