@@ -14,7 +14,7 @@ public class HomeServlet extends HttpServlet {
 	
 	//프로그램 과정 : home아라는 요청을 했을때 -> /WEB-INF/intex.jsp 응답 ->
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//클라이언트에 대한 요청 <- request ->  클라이언트에 대한 응답
+	//클라이언트에 대한 요청 <- request ->  클라이언트에 대한 응답
 		
 		String number = request.getParameter("number"); 
 		//request 객체의 getParameter() 메서드로 사용자가 입력한 데이터를 가져올수있다(int로 사용하고 싶으면 형변환 필요.)
